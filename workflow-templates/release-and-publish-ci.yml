@@ -14,7 +14,7 @@ on:
       release-branch:
         description: 'Release branch'
         required: true
-        default: 'master'    
+        default: 'master'
       devel-branch:
         description: 'Development branch'
         required: true
@@ -70,7 +70,7 @@ jobs:
         tag_name: refs/tags/${{ steps.perform.outputs.generated-tag }}
         release_name: Release ${{ steps.perform.outputs.generated-tag }}
         draft: false
-        prerelease: false    
+        prerelease: false
     - id: show-tag
       name: "Show generated tag"
       run: "echo generated release: ${{ steps.perform.outputs.generated-tag }}"
